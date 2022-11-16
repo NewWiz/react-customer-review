@@ -11,7 +11,6 @@ function FeedbackForm() {
   const [message, setMessage] = useState('')
   const [name, setName] = useState('')
   const [date, setDate] = useState('')
-  const current = new Date()
   const { addFeedback, feedbackEdit, updateFeedback } =
     useContext(FeedbackContext)
 
@@ -21,6 +20,7 @@ function FeedbackForm() {
       setComment(feedbackEdit.item.comment)
       setName(feedbackEdit.item.name)
       setRating(feedbackEdit.item.rating)
+      const current = new Date()
       setDate(
         `${
           current.getMonth() + 1
@@ -30,8 +30,8 @@ function FeedbackForm() {
   }, [feedbackEdit])
 
   const handleTextChange = (e) => {
-    let comment = document.getElementById('inputComment').value
-    let name = document.getElementById('inputName').value
+    const comment = document.getElementById('inputComment').value
+    const name = document.getElementById('inputName').value
     if (comment === '' || name === '') {
       setBtnDisabled(true)
     } else if (name !== '' && name.trim().length <= 2) {
@@ -46,6 +46,7 @@ function FeedbackForm() {
     }
     setComment(comment)
     setName(name)
+    const current = new Date()
     setDate(
       `${current.getMonth() + 1}/${current.getDate()}/${current.getFullYear()}`
     )
