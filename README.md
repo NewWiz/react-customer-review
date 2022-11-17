@@ -1,6 +1,6 @@
 Published to Netlify to show a working example of this CRUD application.
 To view the working app:
-https://luminous-banoffee-ac13ff.netlify.app
+https://react-customer-feedback.netlify.app/
 
 Based off of "Feedback App" by Brad Traversy:
 https://github.com/bradtraversy/feedback-app
